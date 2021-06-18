@@ -23,3 +23,117 @@ p{
   text-align: center;
   font-size: 20px;
 }
+
+/*Somtoday Login Form style*/
+
+
+.loginForm {
+  width: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #555555;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.loginForm h1 {
+  color: #dddddd;
+  font-weight: 500;
+}
+
+.loginForm input[type="text"],
+.loginForm input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #dd9900;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #dddddd;
+  border-radius: 25px;
+  transition: 0.25s;
+  font-size: 16px;
+}
+
+.loginForm input[type="text"]:hover,
+.loginForm input[type="password"]:hover {
+  border-color: #a87e00;
+}
+
+.loginForm input[type="text"]:focus,
+.loginForm input[type="password"]:focus {
+  width: 280px;
+  border-color: #b88100;
+}
+
+.loginForm input[type="text"]::placeholder,
+.loginForm input[type="password"]::placeholder {
+  color: dddddd;
+  opacity: 0.7;
+}
+
+.loginForm input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #666666;
+  padding: 14px 10px;
+  width: 100px;
+  outline: none;
+  color: dddddd;
+  border-radius: 25px;
+  transition: 0.25s;
+  font-size: 16px;
+}
+
+.loginForm input[type="submit"]:hover {
+  width: 140px;
+  border-color: #474747;
+}
+
+#selSchool {
+  width: 50%;
+}
+
+span.select2.select2-container.select2-container--default.select2-container--below{
+  width: 50%;
+}
+
+span#select2-selSchool-container {
+  background-color: #555555;
+  border-radius: 25px;
+  border: 2px solid #666666;
+  color: #dddddd;
+  border: 2px solid #dd9900;
+}
+
+span.select2-dropdown.select2-dropdown--below {
+  background-color: #555555;
+  color: #dddddd;
+  border: 2px solid #dd9900;
+  border-radius: 15px;
+}
+
+span.select2-selection.select2-selection--single {
+  background: none;
+  border: none;
+}
+
+input.select2-search__field {
+  background-color: #555555;
+  color: #dddddd;
+  border: 2px solid #dd9900;
+  border-radius: 15px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  border: 2px solid #dd9900;
+}
