@@ -3,29 +3,37 @@
 
 /*Main CSS*/
 
+/*
+#222222
+#5e82a4
+#1c5d99
+#639fab
+#bbcde5
+#99abc3
+*/
+
 body {
   margin: 0;
   padding: 0;
   color: #222222;
-  background-color: #BBCDE5;
+  background-color: #bbcde5;
 
   /*color: #BBCDE5;
   background-color: #222222;*/
   font-family: Roboto;
 }
 
-h1{
+h1 {
   text-align: center;
   font-size: 40px;
 }
 
-p{
+p {
   text-align: center;
   font-size: 20px;
 }
 
 /*Somtoday Login Form style*/
-
 
 .loginForm {
   width: 400px;
@@ -34,7 +42,7 @@ p{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #555555;
+  background-color: #5e82a4;
   text-align: center;
   border-radius: 20px;
 }
@@ -50,7 +58,7 @@ p{
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #dd9900;
+  border: 2px solid #bbcde5;
   padding: 14px 10px;
   width: 200px;
   outline: none;
@@ -62,13 +70,13 @@ p{
 
 .loginForm input[type="text"]:hover,
 .loginForm input[type="password"]:hover {
-  border-color: #a87e00;
+  border-color: #99abc3;
 }
 
 .loginForm input[type="text"]:focus,
 .loginForm input[type="password"]:focus {
   width: 280px;
-  border-color: #b88100;
+  border-color: #639fab;
 }
 
 .loginForm input[type="text"]::placeholder,
@@ -82,7 +90,7 @@ p{
   display: block;
   margin: 20px auto;
   text-align: center;
-  border: 2px solid #666666;
+  border: 2px solid #bbcde5;
   padding: 14px 10px;
   width: 100px;
   outline: none;
@@ -94,29 +102,28 @@ p{
 
 .loginForm input[type="submit"]:hover {
   width: 140px;
-  border-color: #474747;
+  border-color: #99abc3;
 }
 
 #selSchool {
   width: 50%;
 }
 
-span.select2.select2-container.select2-container--default.select2-container--below{
+span.select2.select2-container.select2-container--default.select2-container--below {
   width: 50%;
 }
 
 span#select2-selSchool-container {
-  background-color: #555555;
+  background-color: none;
   border-radius: 25px;
-  border: 2px solid #666666;
+  border: 2px solid #bbcde5;
   color: #dddddd;
-  border: 2px solid #dd9900;
 }
 
 span.select2-dropdown.select2-dropdown--below {
-  background-color: #555555;
+  background-color: #5e82a4;
   color: #dddddd;
-  border: 2px solid #dd9900;
+  border: 2px solid #bbcde5;
   border-radius: 15px;
 }
 
@@ -126,12 +133,29 @@ span.select2-selection.select2-selection--single {
 }
 
 input.select2-search__field {
-  background-color: #555555;
-  color: #dddddd;
-  border: 2px solid #dd9900;
+  background-color: #5e82a4;
+  color: #5e82a4;
+  border: 2px solid #bbcde5;
   border-radius: 15px;
 }
 
 .select2-container--default .select2-search--dropdown .select2-search__field {
-  border: 2px solid #dd9900;
+  border: 2px solid #bbcde5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #85a1cd;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bbcde5;
 }
