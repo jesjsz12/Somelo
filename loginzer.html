@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Somelo</title>
+        <link rel="stylesheet" href="style.css" >
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" /> 
+    </head>
+    <body>
+
+        <h1>Somelo</h1>
+        <form class="loginForm" onsubmit="validateLogin()" id="loginForm" action="javascript:void(0);" data-bitwarden-watching="1">
+            <h2>Zermelo Login</h2>
+            <input id="usrname" type="text" name="" placeholder="Gebruikersnaam">
+            <input id="password" type="text" name="" placeholder="Password">
+            <input type="submit" value="Login">
+            <br>
+            <br>
+            <p id="falseCred" style="color: red;"></p>
+        </form>
+        
+        
+        <script src="api.js"></script>
+        <script src="login.js"></script>
+    </body>
+</html>
