@@ -121,6 +121,7 @@ async function getID(){
             localStorage.setItem("loggedIn", true);
             sessionStorage.setItem("firstLogin", true);
             sessionStorage.setItem("Name", naam);
+            window.location.href = "loginzer.html";
         })
         .catch(errors=>console.log(errors));
 }

@@ -24,6 +24,7 @@ async function zerLogin(){
         console.log(res)
         zerToken = res.access_token;
         zerExpire = expires_in;
+        window.location.href = "";
     })
     
 
