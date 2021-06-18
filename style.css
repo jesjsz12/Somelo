@@ -33,12 +33,23 @@ p {
   font-size: 20px;
 }
 
-.zerToturial {
-  position: relative;
-  transform: translate(-50%);
-  left: 50%;
+.zerTotTerug {
   text-align: center;
   font-size: 20px;
+  background: none;
+  border: 2px solid #5e82a4;
+  padding: 14px 10px;
+  width: 100px;
+  outline: none;
+  color: #dddddd;
+  border-radius: 25px;
+  transition: 0.25s;
+  text-decoration: none;
+}
+
+.zerTotLink{
+  text-decoration: underline;
+  color: #dddddd;
 }
 
 /*Somtoday Login Form style*/
