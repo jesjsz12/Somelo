@@ -33,7 +33,7 @@ const tokenHeader = {
 //SomtodayAPI Login
 function invalidGrant(invalidG){
     if(invalidG === true){
-        pwdText.innerHTML = 'Check je Gebruikersnaam, <br> Wachtwoord en School naam.';
+        pwdText.innerHTML = 'Check School, E-mail and Password.';
     } else{
         pwdText.innerHTML = '';
     }
