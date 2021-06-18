@@ -39,14 +39,13 @@ p{
   border-radius: 20px;
 }
 
-.loginForm h1 {
+.loginForm h2 {
   color: #dddddd;
   font-weight: 500;
 }
 
 .loginForm input[type="text"],
 .loginForm input[type="password"] {
-  border: 0;
   background: none;
   display: block;
   margin: 20px auto;
@@ -74,12 +73,11 @@ p{
 
 .loginForm input[type="text"]::placeholder,
 .loginForm input[type="password"]::placeholder {
-  color: dddddd;
+  color: #dddddd;
   opacity: 0.7;
 }
 
 .loginForm input[type="submit"] {
-  border: 0;
   background: none;
   display: block;
   margin: 20px auto;
@@ -88,7 +86,7 @@ p{
   padding: 14px 10px;
   width: 100px;
   outline: none;
-  color: dddddd;
+  color: #dddddd;
   border-radius: 25px;
   transition: 0.25s;
   font-size: 16px;
