@@ -3,15 +3,13 @@ var usrname;
 var pwd;
 var schoolCode = ""
 var apiurl = '';
-var accesstoken = '';
+var somToken = '';
 var leerlingID;
 var datum = "2021-3-31";
 var pattern = /^[^\s@]+@[^\s@]+$/;
 var validText = document.getElementById("validText");
 var pwdText = document.getElementById("pwdText");
 var LoggedIn = localStorage.getItem("loggedIn");
-
-//ZermeloAPI Variables
 
 
 
@@ -94,9 +92,9 @@ async function getToken(){
     .then(data=>{return data.json()})
     .then(res=>{
         if(res.error != "invalid_grant"){
-            sessionStorage.setItem("token", res.access_token);
-            localStorage.setItem("refreshtoken", res.refresh_token);
-            sessionStorage.setItem("expireTime", res.expires_in);
+            sessionStorage.setItem("somToken", res.access_token);
+            localStorage.setItem("somRefresh", res.refresh_token);
+            sessionStorage.setItem("somExpire", res.expires_in);
             invalidGrant(false);
             getID();
         }else{
@@ -135,5 +133,3 @@ async function submitForm(){
     } catch (e) {
     };
 };
-
-//ZermeloAPI Login

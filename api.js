@@ -55,7 +55,7 @@ async function refreshToken(){
     .then(data=>{return data.json()})
         .then(res=>{
             console.log(res)
-            accesstoken = res.access_token;
+            somToken = res.access_token;
             sessionStorage.setItem("token", res.access_token);
             localStorage.setItem("refreshtoken", res.refresh_token);
         })
@@ -85,7 +85,7 @@ async function getVakken(){
     await fetch(`https://api.somtoday.nl/rest/v1/vakkeuzes`, {
             headers:{
                 Accept: "application/json",
-                Authorization: `Bearer ${accesstoken}`,
+                Authorization: `Bearer ${somToken}`,
                 Range:  `items=0-99`
             },
             method: 'GET',
@@ -117,7 +117,7 @@ async function gradeAPI(itemCount){
     await fetch(`https://api.somtoday.nl/rest/v1/resultaten/huidigVoorLeerling/${inputID}`, {
         headers:{
             Accept: "application/json",
-            Authorization: `Bearer ${accesstoken}`,
+            Authorization: `Bearer ${somToken}`,
             Range:  `items=${itemCount}`
         },
         method: 'GET',
