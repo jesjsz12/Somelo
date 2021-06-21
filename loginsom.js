@@ -5,8 +5,6 @@ var schoolCode = ""
 var apiurl = '';
 var somToken = '';
 var leerlingID;
-var datum = "2021-3-31";
-var pattern = /^[^\s@]+@[^\s@]+$/;
 var validText = document.getElementById("validText");
 var pwdText = document.getElementById("pwdText");
 var LoggedIn = localStorage.getItem("loggedIn");
@@ -15,6 +13,7 @@ var LoggedIn = localStorage.getItem("loggedIn");
 
 window.onload = function(){
     if(LoggedIn == 'true'){
+        window.location.href = "home.html";
     }
 };
 
@@ -92,9 +91,9 @@ async function getToken(){
     .then(data=>{return data.json()})
     .then(res=>{
         if(res.error != "invalid_grant"){
-            sessionStorage.setItem("somToken", res.access_token);
+            localStorage.setItem("somToken", res.access_token);
             localStorage.setItem("somRefresh", res.refresh_token);
-            sessionStorage.setItem("somExpire", res.expires_in);
+            localStorage.setItem("somExpire", (Date.now() + res.expires_in));
             invalidGrant(false);
             getID();
         }else{
@@ -108,7 +107,7 @@ async function getID(){
     await fetch(`https://api.somtoday.nl/rest/v1/leerlingen`, {
             headers:{
                 Accept: "application/json",
-                Authorization: `Bearer ${sessionStorage.getItem("token")}`,
+                Authorization: `Bearer ${localStorage.getItem("somToken")}`,
                 Range: "items=0-99"
             },
             method: 'GET',
@@ -118,8 +117,6 @@ async function getID(){
             var tokenid = res.items[0].links[0].id;
             var naam = res.items[0].roepnaam;
             localStorage.setItem("ID", tokenid);
-            localStorage.setItem("loggedIn", true);
-            sessionStorage.setItem("firstLogin", true);
             sessionStorage.setItem("Name", naam);
             window.location.href = "loginzer.html";
         })

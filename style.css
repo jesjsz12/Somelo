@@ -28,6 +28,11 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
 p {
   text-align: center;
   font-size: 20px;
@@ -95,7 +100,7 @@ p {
 .loginForm input[type="text"]:focus,
 .loginForm input[type="password"]:focus {
   width: 280px;
-  border-color: #639fab;
+  border-color: #99abc3;
 }
 
 .loginForm input[type="text"]::placeholder,
@@ -177,4 +182,72 @@ input.select2-search__field {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #bbcde5;
+}
+
+.Button {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #5e82a4;
+  padding: 14px 10px;
+  width: 100px;
+  outline: none;
+  color: #222222;
+  border-radius: 25px;
+  transition: 0.25s;
+  font-size: 16px;
+  position: absolute;
+  text-decoration: none;
+}
+
+.Button:hover {
+  width: 120px;
+  border-color: #99abc3;
+}
+
+/*Rooster CSS*/
+
+.roosterWrapper{
+  background-color: #8D9DB2;
+  width: 48%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  height: 100%;
+}
+
+.uurWrapper p{
+  text-align: left;
+}
+
+.uurGetal{
+  position: relative;
+  float: left;
+  margin-left: 3%;
+  margin-top: 2,5%;
+}
+
+.uurDataWrapper{
+  position: relative;
+  background-color: #BBCDE5;
+  width: 85%;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  left: 8%;
+
+}
+
+.uurDataWrapper p{
+  text-align: left;
+  height: 10%;
+}
+
+.uurDataR{
+  margin-left: 50%;
+  position: absolute;
+  margin-top: 0;
+  top: 0;
 }

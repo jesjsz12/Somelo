@@ -24,6 +24,27 @@ function getUnique(array){
 }
 
 
+//Logout function
+
+function logOut(){
+    //logout somtoday
+    localStorage.removeItem("ID");
+    localStorage.removeItem("loggedIn");
+    sessionStorage.removeItem("firstLogin");
+    sessionStorage.removeItem("Name");
+    localStorage.removeItem("somToken");
+    localStorage.removeItem("somRefresh");
+    localStorage.removeItem("somExpire");
+
+    //logout zermelo
+    localStorage.removeItem("zerToken");
+    localStorage.removeItem("zerExpire");
+
+    //go back to homepage
+    window.location.href = "index.html";
+}
+
+
 //Somtoday API Section
 
 async function getGrades(){
@@ -39,6 +60,9 @@ async function getGrades(){
 
 
 async function refreshToken(){
+
+    if((somExpire - Date.now()) <= 0){
+
     await fetch('https://somtoday.nl/oauth2/token', {
         headers: {
             Accept: "application/json",
@@ -46,7 +70,7 @@ async function refreshToken(){
         },
         body: (new URLSearchParams({
             grant_type: 'refresh_token',
-            refresh_token: localStorage.getItem("refreshtoken"),
+            refresh_token: localStorage.getItem("somRefresh"),
             scope: 'openid',
             client_id: 'D50E0C06-32D1-4B41-A137-A9A850C892C2'
         }).toString()),
@@ -56,15 +80,17 @@ async function refreshToken(){
         .then(res=>{
             console.log(res)
             somToken = res.access_token;
-            sessionStorage.setItem("token", res.access_token);
-            localStorage.setItem("refreshtoken", res.refresh_token);
+            somExpire = (Date.now() + res.expires_in)
+            localStorage.setItem("somToken", res.access_token);
+            localStorage.setItem("somRefresh", res.refresh_token);
+            localStorage.setItem("somExpire", (Date.now() + res.expires_in));
         })
     .catch(error=>console.log(error));
 
     await fetch(`https://api.somtoday.nl/rest/v1/leerlingen`, {
             headers:{
                 Accept: "application/json",
-                Authorization: `Bearer ${accesstoken}`,
+                Authorization: `Bearer ${somToken}`,
                 Range: "items=0-99"
             },
             method: 'GET',
@@ -75,10 +101,12 @@ async function refreshToken(){
             inputID = res.items[0].links[0].id;
             sessionStorage.setItem("Name", res.items[0].roepnaam);
             namen = res.items[0].roepnaam;
-            sessionStorage.setItem("firstLogin", true);
-            window.location.href = "graphs.html";
         })
         .catch(errors=>console.log(errors));
+
+    }
+
+
 };
 
 async function getVakken(){
@@ -136,3 +164,19 @@ async function gradeAPI(itemCount){
 
 //Zermelo API Section
 
+
+async function getAppointments(start, end){
+    await fetch(`https://${school}.zportal.nl/api/v2/appointments?user=~me&start=${start}&end=${end}&access_token=${zerToken}`, {
+    })
+    .then(data=>{return data.json()})
+    .then(res=>{
+        console.log(res)
+    })
+}
+
+
+var unixTime = Math.round(Date.now()/1000);
+
+/*console.log(Date.now())
+var d = new Date()
+console.log(d.getDay())*/
