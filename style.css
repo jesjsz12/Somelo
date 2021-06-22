@@ -52,7 +52,7 @@ p {
   text-decoration: none;
 }
 
-.zerTotLink{
+.zerTotLink {
   text-decoration: underline;
   color: #dddddd;
 }
@@ -176,12 +176,12 @@ input.select2-search__field {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #85a1cd;
+  background: #6f7c8d;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #bbcde5;
+  background: #545e6b;
 }
 
 .Button {
@@ -209,45 +209,121 @@ input.select2-search__field {
 
 /*Rooster CSS*/
 
-.roosterWrapper{
-  background-color: #8D9DB2;
+.roosterWrapper {
+  background-color: #8d9db2;
+  position: absolute;
   width: 48%;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   padding-top: 2%;
-  padding-bottom: 2%;
+  padding-bottom: 6%;
   height: 100%;
+  top: 30%;
 }
 
-.uurWrapper p{
-  text-align: left;
+.homeHR {
+  height: 8px;
+  border: none;
+  width: 75%;
+  background-color: #8d9db2;
+  border-radius: 25px;
 }
 
-.uurGetal{
+.uurGetal {
   position: relative;
+  text-align: left;
   float: left;
   margin-left: 3%;
-  margin-top: 2,5%;
+  margin-top: 2%;
 }
 
-.uurDataWrapper{
+.uurDataWrapper {
   position: relative;
-  background-color: #BBCDE5;
+  background-color: #bbcde5;
   width: 85%;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   left: 8%;
-
 }
 
-.uurDataWrapper p{
+.uurDataWrapper p {
   text-align: left;
   height: 10%;
 }
 
-.uurDataR{
-  margin-left: 50%;
+.uurDataR {
+  margin-left: 60%;
   position: absolute;
   margin-top: 0;
   top: 0;
+}
+
+.cijferWrapper {
+  width: 48%;
+  background-color: #8d9db2;
+  margin-left: 52%;
+  position: absolute;
+  margin-top: 0;
+  top: 30%;
+  height: 40%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.cijferD {
+  border-width: 5px;
+  border-style: solid;
+  border-color: #8d9db2;
+  background-color: #8d9db2;
+  height: 20%;
+}
+
+.cijferL {
+  border-width: 5px;
+  border-style: solid;
+  border-color: #8d9db2;
+  background-color: #bbcde5;
+  height: 20%;
+}
+
+#cTop {
+  border-top-left-radius: 25px;
+}
+
+#cBottom {
+  border-bottom-left-radius: 25px;
+}
+
+.aHR {
+  height: 8px;
+  border: none;
+  width: 100%;
+  background-color: #bbcde5;
+}
+
+@media screen and (max-width: 680px) {
+  .roosterWrapper {
+    width: 100vw;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .cijferWrapper {
+    width: 100vw;
+    background-color: #8d9db2;
+    margin-left: 0;
+    position: absolute;
+    height: 40%;
+    top: 145%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: none;
+  }
+  #cTop {
+    border-top-left-radius: 0px;
+  }
+
+  #cBottom {
+    border-bottom-left-radius: 0px;
+  }
 }
