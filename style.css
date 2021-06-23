@@ -274,6 +274,7 @@ input.select2-search__field {
   border-color: #8d9db2;
   background-color: #8d9db2;
   height: 20%;
+  padding-left: 1%;
 }
 
 .cijferL {
@@ -281,7 +282,26 @@ input.select2-search__field {
   border-style: solid;
   border-color: #8d9db2;
   background-color: #bbcde5;
-  height: 20%;
+  height: 25%;
+  padding-top: 1%;
+  padding-left: 1%;
+}
+
+.cText {
+  text-align: left;
+  margin: 0;
+  width: 50%;
+  float: left;
+}
+
+.cTextK {
+  float: left;
+  text-align: left;
+  margin: 0;
+  width: 50%;
+  font-size: 16px;
+  margin-left: 0;
+  color: #363636;
 }
 
 #cTop {
@@ -290,6 +310,7 @@ input.select2-search__field {
 
 #cBottom {
   border-bottom-left-radius: 25px;
+  padding-bottom: 2%;
 }
 
 .aHR {
@@ -297,6 +318,33 @@ input.select2-search__field {
   border: none;
   width: 100%;
   background-color: #bbcde5;
+}
+
+.cijferD .cWrap {
+  position: relative;
+  margin-left: 75%;
+  width: 8%;
+  height: 100%;
+  bottom: 120%;
+
+  background-color: #bbcde5;
+  border-radius: 12px;
+}
+
+.cijferL .cWrap {
+  position: relative;
+  margin-left: 75%;
+  width: 8%;
+  height: 75%;
+  bottom: 80%;
+  background-color: #8d9db2;
+  border-radius: 12px;
+}
+
+.cWrap p {
+  position: relative;
+  top: 25%;
+  text-align: center;
 }
 
 @media screen and (max-width: 680px) {
@@ -312,7 +360,7 @@ input.select2-search__field {
     margin-left: 0;
     position: absolute;
     height: 40%;
-    top: 145%;
+    top: 170%;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border: none;
@@ -323,5 +371,13 @@ input.select2-search__field {
 
   #cBottom {
     border-bottom-left-radius: 0px;
+  }
+
+  .cijferD .cWrap {
+    width: 16%;
+  }
+
+  .cijferL .cWrap {
+    width: 16%;
   }
 }
