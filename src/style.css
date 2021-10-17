@@ -269,6 +269,7 @@ input.select2-search__field {
 }
 
 .cijferD {
+  position: relative;
   border-width: 5px;
   border-style: solid;
   border-color: #8d9db2;
@@ -278,6 +279,7 @@ input.select2-search__field {
 }
 
 .cijferL {
+  position: relative;
   border-width: 5px;
   border-style: solid;
   border-color: #8d9db2;
@@ -321,30 +323,30 @@ input.select2-search__field {
 }
 
 .cijferD .cWrap {
-  position: relative;
+  position: absolute;
   margin-left: 75%;
-  width: 8%;
-  height: 100%;
-  bottom: 120%;
-
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  transform: translate(-50%);
   background-color: #bbcde5;
   border-radius: 12px;
 }
 
 .cijferL .cWrap {
-  position: relative;
+  position: absolute;
   margin-left: 75%;
-  width: 8%;
-  height: 75%;
-  bottom: 80%;
+  width: 60px;
+  height: 60px;
+  top: 20%;
+  transform: translate(-50%);
   background-color: #8d9db2;
   border-radius: 12px;
 }
 
-.cWrap p {
-  position: relative;
-  top: 25%;
-  text-align: center;
+.cWrapText{
+  position: absolute;
+  margin-left: 25%;
 }
 
 @media screen and (max-width: 680px) {
@@ -373,11 +375,8 @@ input.select2-search__field {
     border-bottom-left-radius: 0px;
   }
 
-  .cijferD .cWrap {
-    width: 16%;
-  }
-
-  .cijferL .cWrap {
-    width: 16%;
+  .cWrapText{
+    position: absolute;
+    margin-left: 25%;
   }
 }
