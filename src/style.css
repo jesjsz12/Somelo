@@ -387,6 +387,7 @@ input.select2-search__field {
 
   .cWrapText{
     position: absolute;
-    margin-left: 25%;
+    bottom: -15%;
+    left: -5%;
   }
 }
