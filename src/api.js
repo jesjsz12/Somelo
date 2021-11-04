@@ -142,6 +142,9 @@ async function getVakken(){
 }
 
 async function gradeAPI(itemCount){
+    inputID = localStorage.getItem('ID')
+    somToken = localStorage.getItem('somToken')
+
     await fetch(`https://api.somtoday.nl/rest/v1/resultaten/huidigVoorLeerling/${inputID}`, {
         headers:{
             Accept: "application/json",

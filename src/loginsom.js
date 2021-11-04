@@ -77,7 +77,7 @@ async function makeOptions(){
 
 
 async function getToken(){ 
-    await fetch('https://somtoday.nl/oauth2/token', {
+    await fetch('https://inloggen.somtoday.nl/oauth2/token', {
         headers: tokenHeader,
         body: (new URLSearchParams({
             grant_type: 'password',
