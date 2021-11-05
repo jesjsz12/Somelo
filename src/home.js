@@ -19,10 +19,9 @@ async function showLastGrades(){
         }else if(lastFive[i].examenWeging > 0){
             weging = lastFive[i].examenWeging
         }
-
         document.getElementsByClassName("grades")[i].children[0].innerHTML = lastFive[i].vak.naam;
-        document.getElementsByClassName("grades")[i].children[3].innerHTML = `${lastFive[i].omschrijving} (${weging}x)`;
-        document.getElementsByClassName("grades")[i].children[4].children[0].innerHTML = lastFive[i].geldendResultaat
+        document.getElementsByClassName("grades")[i].children[4].innerHTML = `${lastFive[i].omschrijving} (${weging}x)`;
+        document.getElementsByClassName("grades")[i].children[5].children[0].innerHTML = lastFive[i].geldendResultaat
     }
     
 }

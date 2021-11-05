@@ -274,7 +274,7 @@ input.select2-search__field {
   border-style: solid;
   border-color: #8d9db2;
   background-color: #8d9db2;
-  height: 20%;
+  height: 15vh;
   padding-left: 1%;
 }
 
@@ -284,7 +284,7 @@ input.select2-search__field {
   border-style: solid;
   border-color: #8d9db2;
   background-color: #bbcde5;
-  height: 25%;
+  height: 15vh;
   padding-top: 1%;
   padding-left: 1%;
 }
@@ -373,6 +373,13 @@ input.select2-search__field {
 
   #cBottom {
     border-bottom-left-radius: 0px;
+  }
+
+  .cijferD{
+  }
+
+  .cijferL{
+
   }
 
   .cijferD .cWrap {
