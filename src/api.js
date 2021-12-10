@@ -5,6 +5,9 @@ var vResponse = [];
 
 //ZermeloAPI Variables
 
+const d = new Date();
+const year = d.getFullYear();
+
 function round(value, precision) {
     var multiplier = Math.pow(10, precision || 0);
     return Math.round(value * multiplier) / multiplier;
@@ -56,6 +59,14 @@ async function getGrades(){
     await gradeAPI('299-399')
 
     return tResponse
+}
+
+function getWeek(){
+    currentdate = new Date();
+    var oneJan = new Date(currentdate.getFullYear(),0,1);
+    var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
+    var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
+    return result;
 }
 
 
@@ -168,18 +179,28 @@ async function gradeAPI(itemCount){
 //Zermelo API Section
 
 
-async function getAppointments(start, end){
-    await fetch(`https://${school}.zportal.nl/api/v2/appointments?user=~me&start=${start}&end=${end}&access_token=${zerToken}`, {
+async function getAppointments(week){
+    school = 'ccg'
+    zerToken = '61u14u6lcson9nngvoaeqlaedt';
+    var studentID = '57945'
+
+    await fetch(`https://${school}.zportal.nl/api/v3/liveschedule?student=57945&week=202146`, {
+        method: 'POST',
+        headers:{
+            'Authorization':  `Bearer ${zerToken}`
+        },
+        /*body: JSON.stringify({
+            student: studentID,
+            week: `${year}${week}`
+        })*/
     })
     .then(data=>{return data.json()})
     .then(res=>{
         console.log(res)
     })
+    .catch(err =>{
+        console.log(err)
+    })
 }
 
-
-var unixTime = Math.round(Date.now()/1000);
-
-/*console.log(Date.now())
-var d = new Date()
-console.log(d.getDay())*/
+getAppointments('46');
